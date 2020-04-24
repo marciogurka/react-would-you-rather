@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, #root, .app-container {
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Login Page */
+.login-page.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.login-page .field {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 25px;
+}
+
+/* Navbar */
+.navbar figure {
+  margin-top: 5px;
+}
+
+/* Tabs page */
+.tabs { 
+  flex-direction: column;
+}
+
+.tabs .questions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.tabs .questions .box .box-content, .tabs .questions .box .box-content > .options {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs .questions .box .box-content > .options {
+  border: none;
+  margin-bottom: 15px;
+}
+
+/* Shared style */
+.tabs .questions .box .author, .leaderboard .box .author, .question-board .box .author , .question-board-result .box .author {
+  display: flex;
+  align-items: center;
+}
+
+.tabs .questions .box .author > span, .leaderboard .box .author > span, .question-board .box .author > span, .question-board-result .box .author > span {
+  margin-left: 10px;
+}
+
+.tabs .questions .box .box-content > span, .question-board .box .box-content p {
+  margin-bottom: 12px;
+}
+
+/* checkbox */
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.checkbox input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.checkbox .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* QuestionBoardResult */
+.question-board-result .options p {
+  margin-bottom: 10px;
+}
+
+.question-board-result .options progress {
+  margin-bottom: 0;
+}
+
+.question-board-result .tag {
+  margin-left: 10px
+}
